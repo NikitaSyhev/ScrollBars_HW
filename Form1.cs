@@ -16,9 +16,11 @@ namespace ScrollBars_HW
         {
             InitializeComponent();
             textBox_Horizont.Multiline = true;
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            this.pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
-        private void TextBox_Scroll_Scroll(object sender, ScrollEventArgs e)
+            private void TextBox_Scroll_Scroll(object sender, ScrollEventArgs e)
         {
             textBox_Horizont.Location = new Point(TextBox_Scroll.Value, textBox_Horizont.Location.Y);
             int x_Left_Coordinate = textBox_Horizont.Location.X;
